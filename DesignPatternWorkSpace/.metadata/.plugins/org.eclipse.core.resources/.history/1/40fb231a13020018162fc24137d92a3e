@@ -1,0 +1,8 @@
+package com.pattern.example.facade;
+
+public enum AccountManager 
+{
+	DISCOVER
+	MASTER
+
+}

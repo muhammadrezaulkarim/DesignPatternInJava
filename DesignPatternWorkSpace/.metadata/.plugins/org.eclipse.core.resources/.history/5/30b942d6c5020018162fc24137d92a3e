@@ -1,0 +1,6 @@
+package com.pattern.example.facade;
+
+public class CreditCardType 
+{
+
+}

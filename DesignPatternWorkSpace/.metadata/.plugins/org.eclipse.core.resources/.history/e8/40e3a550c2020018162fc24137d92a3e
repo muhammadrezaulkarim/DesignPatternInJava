@@ -1,0 +1,21 @@
+package com.pattern.example.observer;
+
+public class WeatherStation 
+{
+	
+	public static void main(String[] args) throws Exception 
+	{
+		// Create the Subject or the observable
+		WeatherData weatherMonitor = new WeatherData();
+	
+		//create the observer
+		Observer observer= new CurrentMeasurementDisplay(weatherMonitor);
+		
+		System.out.println("Current readings:");
+		weatherMonitor.setMeasurements(-10, 40, 30.4);  // current measurements should be automatically displayed now
+		
+		System.out.println("Current readings:");  // current measurements should be automatically displayed now
+		weatherMonitor.setMeasurements(-10, 40, 30.4);
+	}
+
+}

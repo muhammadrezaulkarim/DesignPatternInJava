@@ -1,0 +1,21 @@
+package com.pattern.example.observer;
+
+public class MonthlyReport implements Observer {
+
+	private ReportManager objReportManager;
+
+	public MonthlyReport(ReportManager objReportManager) throws Exception {
+		super("Observer Pattern - Example");
+		objReportManager = objReportManager;
+
+		objReportManager.register(this);
+	}
+
+	public void refreshData(Observable subject) {
+		if (subject == objReportManager) {
+			// get subject's state
+			// take whatver action you need to take
+		}
+	}
+
+}

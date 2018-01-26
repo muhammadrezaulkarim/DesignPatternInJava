@@ -1,0 +1,20 @@
+package com.pattern.example;
+
+import com.pattern.example.factory.ConsoleLogger;
+import com.pattern.example.factory.FileLogger;
+
+import Utility.Logger;
+
+public class LoggerFactory 
+{
+	public boolean isFileLoggingEnabled=true;
+	
+	public Logger getLogger()
+	{
+		if(isFileLoggingEnabled)  // read the logger value from some configuration file
+			return new FileLogger();
+		else
+			return new ConsoleLogger();
+	}
+
+}

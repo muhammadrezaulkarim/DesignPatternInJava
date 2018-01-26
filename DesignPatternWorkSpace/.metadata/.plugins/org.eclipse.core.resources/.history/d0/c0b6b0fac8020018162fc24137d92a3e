@@ -1,0 +1,40 @@
+package com.pattern.example.facade;
+
+public class FacadePatternTestClient 
+{
+	CustomerFacade customerFacade;
+	
+	public FacadePatternTestClient()
+	{
+		this.customerFacade = new CustomerFacade();
+	}
+	
+	public void setCustomerFacade(CustomerFacade customerFacade) 
+	{
+		this.customerFacade = customerFacade;
+	}
+	
+	public CustomerFacade getCustomerFacade() 
+	{
+		return this.customerFacade;
+	}
+
+	public static void main(String [] args[])
+	{
+		CustomerFacade customerFacade=new CustomerFacade();
+		customerFacade.setFName("Muhammad");
+		customerFacade.setLName("Karim");
+		customerFacade.setState("Alberta");
+		customerFacade.setCity("Calgary");
+		customerFacade.setCardType("MasterCard");
+		customerFacade.setCardExpDate("2017-31-12");
+		
+		FacadePatternTestClient  client=new FacadePatternTestClient();
+		//client.setCustomerFacade(customerFacade);
+		
+		
+	
+	}
+	
+	
+}

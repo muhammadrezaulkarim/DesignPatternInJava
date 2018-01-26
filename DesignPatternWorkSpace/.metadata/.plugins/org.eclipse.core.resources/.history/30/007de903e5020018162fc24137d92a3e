@@ -1,0 +1,46 @@
+package com.pattern.example.mvc;
+
+/*The Model-View-Controller architectural pattern (MVC) divides an
+interactive application into three components. The model contains
+the core functionality and data. Views display information to the user.
+Controllers handle user input. Views and controllers together
+comprise the user interface. A change-propagation mechanism
+ensures consistency between the user interface and the model. */
+
+/*Model: Responsibility Provides functional core of the application.
+Registers dependent views and controllers. Notifies dependent
+components about data changes.*/
+
+
+public class RunMVC {
+
+
+	private int start_value = 0;	
+
+	public void TestMVC() 
+	{
+		//create Model and View
+		Model myModel 	= new Model();
+		View myView 	= new View();
+
+		//registers relevant views with the Model
+		myModel.addObserver(myView);
+
+		//create Controller. Link the controller with the associated Model and View
+		Controller myController = new Controller();
+		myController.addModel(myModel);
+		myController.addView(myView);
+
+		//link the controller with the view
+		myView.addController(myController);
+	} 
+	
+
+	public static void main(String[] args)
+	{
+
+		RunMVC ob = new RunMVC();
+		ob.TestMVC();
+
+	} 
+} 

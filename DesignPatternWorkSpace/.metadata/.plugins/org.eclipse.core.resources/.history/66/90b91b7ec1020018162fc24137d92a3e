@@ -1,0 +1,50 @@
+package com.pattern.example.factory;
+
+import Utility.Logger;
+
+/*At times, an application object may only know that it needs to access a class from within the class
+ *  hierarchy, but does not know exactly which class from among the set of subclasses of the parent 
+ *  class is to be selected. The choice of an appropriate class may depend on factors such as:
+ *  The state of the running application, Application configuration settings, Expansion of requirements or 
+ *  enhancements */
+
+//Each client application can implement the selection criteria and instantiate object.
+//selection Criteria can change over time. Whenever the class selection criteria change, 
+//every application object that uses the class hierarchy must undergo a corresponding change
+//That is why appropriate class selection and instantiation should be encapsulated in a 
+//separate method (factory method) in a different class
+
+//Encapsulation of the required implementation to select and instantiate an
+//appropriate class in a separate method (factory method) has the following advantages:
+
+/*Application objects can make use of the factory method to get access to
+the appropriate class instance. This eliminates the need for an application
+object to deal with the varying class selection criteria.*/
+
+
+
+//Because every cleint objects needs to implement the class selection criteria, it
+//results in a high degree of coupling between an application object and
+//the service provider class hierarchy.
+
+/*Besides the class selection criteria, the factory method also implements
+any special mechanisms required to instantiate the selected class. This
+is applicable if different classes in the hierarchy need to be instantiated
+in different ways. The factory method hides these details from application
+objects and eliminates the need for them to deal with these
+intricacies. */
+
+
+public class LoggerFactory 
+{
+	public boolean isFileLoggingEnabled=true;
+	
+	public Logger getLogger()
+	{
+		if(isFileLoggingEnabled)  // read the logger value from some configuration file
+			return new FileLogger();
+		else
+			return new ConsoleLogger();
+	}
+
+}

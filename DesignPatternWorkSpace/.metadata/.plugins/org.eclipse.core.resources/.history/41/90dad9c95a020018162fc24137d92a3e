@@ -1,0 +1,36 @@
+package com.pattern.example.factory;
+
+import Utility.Logger;
+//Encapsulation of the required implementation to select and instantiate an
+//appropriate class in a separate method (factory method) has the following advantages:
+
+/*Application objects can make use of the factory method to get access to
+the appropriate class instance. This eliminates the need for an application
+object to deal with the varying class selection criteria.*/
+
+//selection Criteria can change over time. Whenever the class selection criteria change, 
+// every application object that uses the class hierarchy must undergo a corresponding change
+// That is why appropriate class selection and instantiation should be
+// encapsulated in a separate method (factory method
+
+/*Besides the class selection criteria, the factory method also implements
+any special mechanisms required to instantiate the selected class. This
+is applicable if different classes in the hierarchy need to be instantiated
+in different ways. The factory method hides these details from application
+objects and eliminates the need for them to deal with these
+intricacies. */
+
+
+public class LoggerFactory 
+{
+	public boolean isFileLoggingEnabled=true;
+	
+	public Logger getLogger()
+	{
+		if(isFileLoggingEnabled)  // read the logger value from some configuration file
+			return new FileLogger();
+		else
+			return new ConsoleLogger();
+	}
+
+}

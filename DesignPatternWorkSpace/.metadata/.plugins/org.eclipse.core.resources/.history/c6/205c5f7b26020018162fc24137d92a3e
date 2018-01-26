@@ -1,0 +1,32 @@
+package com.pattern.example.Singleton;
+
+import Utility.FileUtil;
+
+//Singleton pattern is helpful when there is only
+//one physical instance of what the object represents.
+
+//we may need a single database connection object in an application. The Singleton pattern
+//is useful in such cases because it ensures that there exists one and only one
+//instance of a particular object ever.
+
+
+public class FileLogger implements Logger {
+
+	private static FileLogger logger;  // private static instance of the same class
+
+	private static FileLogger getFileLogger()
+	{
+		if (logger == null) 
+		{
+			logger = new FileLogger();
+		}
+		return logger;
+	}
+
+	public synchronized void log(String msg) 
+	{
+		FileUtil futil = new FileUtil();
+		futil.writeToFile("log.txt", msg, true, true);
+	}
+
+}

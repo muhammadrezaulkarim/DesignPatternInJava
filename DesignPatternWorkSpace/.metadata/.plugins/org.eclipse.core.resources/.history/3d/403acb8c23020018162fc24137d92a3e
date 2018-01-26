@@ -1,0 +1,11 @@
+package Utility;
+
+public class FileUtil 
+{
+	
+	public boolean writeToFile(String CC_DATA_FILE, String dataLine, boolean x, boolean y)
+	{
+		return true;
+	}
+
+}

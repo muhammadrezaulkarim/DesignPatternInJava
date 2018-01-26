@@ -1,0 +1,45 @@
+package com.pattern.example.observer;
+
+import java.util.Vector;
+
+public class WeatherData implements Observable {
+
+}
+
+private Vector observersList;
+private String department;
+
+public WeatherData() throws Exception {
+
+	observersList = new Vector();
+
+}
+
+public void register(Observer obs) {
+	// Add to the list of Observers
+	observersList.addElement(obs);
+}
+
+public void unRegister(Observer obs) {
+	// remove from the list of Observers
+}
+
+public void notifyObservers() {
+	// Send notify to all Observers
+	for (int i = 0; i < observersList.size(); i++) {
+		Observer observer = (Observer) observersList.elementAt(i);
+		observer.refreshData(this);
+	}
+}
+
+public void generateEvent() {
+		notifyObservers();
+}
+
+public String getDepartment() {
+	return department;
+}
+
+public void setDepartment(String dept) {
+	department = dept;
+}

@@ -1,0 +1,33 @@
+
+public class RunMVC {
+
+
+	private int start_value = 0;	
+
+	public void TestMVC() 
+	{
+		//create Model and View
+		Model myModel 	= new Model();
+		View myView 	= new View();
+
+		//registers relevant views with the Model
+		myModel.addObserver(myView);
+
+		//create Controller. Link the controller with the associated Model and View
+		Controller myController = new Controller();
+		myController.addModel(myModel);
+		myController.addView(myView);
+
+		//link the controller with the view
+		myView.addController(myController);
+	} 
+	
+
+	public static void main(String[] args)
+	{
+
+		RunMVC ob = new RunMVC();
+		ob.TestMVC();
+
+	} 
+} 

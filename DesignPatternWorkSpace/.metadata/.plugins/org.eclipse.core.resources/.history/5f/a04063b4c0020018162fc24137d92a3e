@@ -1,0 +1,14 @@
+package com.pattern.example.observer;
+
+//Client Code
+public class Client 
+{
+	public static void main(String[] args) throws Exception 
+	{
+		// Create the Subject
+		ReportManager objSubject = new ReportManager();
+		// Create Observers
+		//Create Observers
+		new MonthlyReport(objSubject);
+	}
+}// end of class

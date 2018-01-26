@@ -1,0 +1,16 @@
+package com.pattern.example.observer;
+
+//Client Code
+public class Client 
+{
+	public static void main(String[] args) throws Exception 
+	{
+		// Create the Subject or the observable
+		WeatherData weatherMonitor = new WeatherData();
+	
+		Observer observer= new CurrentMeasurementDisplay(weatherMonitor);
+		System.out.println("Current readings:");
+		weatherMonitor.setMeasurements(-10, 40, 30.4);
+		weatherMonitor.setMeasurements(-10, 40, 30.4);
+	}
+}// end of class

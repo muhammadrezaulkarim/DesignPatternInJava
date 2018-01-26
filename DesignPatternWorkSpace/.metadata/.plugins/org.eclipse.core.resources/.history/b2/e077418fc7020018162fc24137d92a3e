@@ -1,0 +1,11 @@
+package com.pattern.example.facade;
+
+public class FacadePatternTestClient 
+{
+	CustomerFacade customerFacade;
+	public static void main(String [] args[])
+	{
+	}
+	
+	
+}

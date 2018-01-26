@@ -1,0 +1,23 @@
+package com.pattern.example.facade;
+
+public class FacadePatternTestClient 
+{
+	CustomerFacade customerFacade;
+	
+	public FacadePatternTestClient(CustomerFacade customerFacade)
+	{
+		this.customerFacade = customerFacade;
+	}
+	
+	public void setCustomerFacade(CustomerFacade customerFacade) 
+	{
+		this.customerFacade = customerFacade;
+	}
+
+	public static void main(String [] args[])
+	{
+		
+	}
+	
+	
+}

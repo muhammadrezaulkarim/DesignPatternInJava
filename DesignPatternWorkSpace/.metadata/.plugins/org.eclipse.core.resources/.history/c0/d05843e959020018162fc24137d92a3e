@@ -1,0 +1,20 @@
+package com.pattern.example.factory;
+
+import Utility.Logger;
+//Encapsulation of the required implementation to select and instantiate an
+//appropriate class in a separate method (factory method) has the following advantages:
+
+
+public class LoggerFactory 
+{
+	public boolean isFileLoggingEnabled=true;
+	
+	public Logger getLogger()
+	{
+		if(isFileLoggingEnabled)  // read the logger value from some configuration file
+			return new FileLogger();
+		else
+			return new ConsoleLogger();
+	}
+
+}

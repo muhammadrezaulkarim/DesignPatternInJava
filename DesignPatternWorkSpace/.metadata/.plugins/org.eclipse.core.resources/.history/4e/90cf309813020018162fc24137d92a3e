@@ -1,0 +1,11 @@
+package com.pattern.example.facade;
+
+public class FileUtil 
+{
+	
+	public boolean writeToFile(String CC_DATA_FILE, String dataLine, boolean x, boolean y)
+	{
+		return 
+	}
+
+}

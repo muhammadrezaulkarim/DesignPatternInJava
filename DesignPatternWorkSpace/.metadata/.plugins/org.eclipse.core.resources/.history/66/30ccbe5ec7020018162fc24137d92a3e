@@ -1,0 +1,9 @@
+package com.pattern.example.facade;
+
+public class FacadePatternTestClient 
+{
+	public static void main(String [] args[])
+	{
+		CustomerFacade ob=new CustomerFacade();
+	}
+}

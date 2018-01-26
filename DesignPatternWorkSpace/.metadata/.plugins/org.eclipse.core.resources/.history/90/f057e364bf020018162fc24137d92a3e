@@ -1,0 +1,13 @@
+package com.pattern.example.observer;
+
+public class CurrentMeasurementDisplay implements Observable 
+{
+	private double temparature, humidity,pressure;
+	
+	public void refreshMeasurementData(double temparature, double humidity,double pressure)
+	{
+		this.temparature=temparature;
+		this.humidity=humidity;
+		this.pressure=pressure;
+	}
+}
