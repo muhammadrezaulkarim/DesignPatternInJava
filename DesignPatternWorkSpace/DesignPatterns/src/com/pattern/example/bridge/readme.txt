@@ -20,7 +20,7 @@ abstraction interface and its implementation are closely tied together and hence
 each other.
 
 To be more specific, we have to extend subclass hierarchy of the implementer classes to support all scenarios which might lead to an exponential number of 
-subclasses ***
+subclasses. For the logging example, we can define implement subclasses like FileLoggerTextFormat, FileLoggerEncryptedFormat and so on***
 
 -------------------------------------------------------------------------------------------------------------------
 *** Using the Bridge pattern, a more efficient and manageable design of an abstraction can be achieved. 
