@@ -1,7 +1,7 @@
 package com.pattern.example.factory;
 
 import Utility.FileUtil;
-import Utility.Logger;
+
 
 public class FileLogger implements Logger
 {
