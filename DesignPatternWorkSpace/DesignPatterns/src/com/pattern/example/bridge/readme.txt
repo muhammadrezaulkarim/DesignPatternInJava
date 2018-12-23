@@ -1,7 +1,7 @@
 *** Abstraction refers to the process of identifying
 the set of attributes and behavior of an object that is specific to a particular usage.
 
-The related object can have more than one associated abstractions, each with a distinct usage ***
+The related object can have more than one associated abstractions, each with a distinct usage
 
 For example, logger abstraction refers to the abstraction of the message logging
 functionality. ****
