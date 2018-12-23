@@ -1,5 +1,7 @@
 package com.pattern.example.bridge;
 
+import Utility.FileUtil;
+
 public class FileLogger implements MessageLogger 
 {
 
