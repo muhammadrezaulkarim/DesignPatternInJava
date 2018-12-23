@@ -1,7 +1,5 @@
 package com.pattern.example.factory;
 
-import Utility.Logger;
-
 /*At times, an application object may only know that it needs to access a class from within the class
  *  hierarchy, but does not know exactly which class from among the set of subclasses of the parent 
  *  class is to be selected. The choice of an appropriate class may depend on factors such as:
