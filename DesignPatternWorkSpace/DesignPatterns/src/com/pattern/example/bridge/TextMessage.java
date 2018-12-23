@@ -19,6 +19,6 @@ public class TextMessage implements Message
   private String preProcess(String msg) 
   {
     return msg;
-  };
+  }
 
 }
