@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 
-public class FileLogger implements Logger
+public class FileLogger implements MessageLogger
 {
 	
 	public void log(String msg) 
