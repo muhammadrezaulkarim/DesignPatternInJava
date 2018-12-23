@@ -36,7 +36,7 @@ public class LoggerFactory
 {
 	public boolean isFileLoggingEnabled=true;
 	
-	public Logger getLogger()
+	public MessageLogger getLogger()
 	{
 		// you can read a configuration file here to make decision
 		if(isFileLoggingEnabled)  // read the logger value from some configuration file
