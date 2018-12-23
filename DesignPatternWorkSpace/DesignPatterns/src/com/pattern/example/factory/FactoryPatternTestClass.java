@@ -7,7 +7,7 @@ public class FactoryPatternTestClass
 		 
 		 LoggerFactory factory=new LoggerFactory();
 		 
-		 # Returns a object based on current configuration
+		 // Returns a object based on current configuration
 		 MessageLogger logger=factory.getLogger();
 		 logger.log("A message to log.");
 	}
