@@ -1,7 +1,7 @@
 package com.pattern.example.bridge;
 
 
-public class Client 
+public class BridgePatternTestClass
 {
   public static void main(String[] args) 
   {
