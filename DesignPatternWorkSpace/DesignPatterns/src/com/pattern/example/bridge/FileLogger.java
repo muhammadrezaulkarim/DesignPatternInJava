@@ -8,8 +8,8 @@ import java.io.PrintWriter;
 public class FileLogger implements MessageLogger 
 {
 	
-	public void logMsg(String msg) 
-	{
+     public void logMsg(String msg) 
+     {
       
       PrintWriter printer=null;
       File output=null ;
