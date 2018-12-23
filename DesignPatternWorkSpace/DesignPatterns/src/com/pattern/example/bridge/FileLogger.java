@@ -1,7 +1,5 @@
 package com.pattern.example.bridge;
 
-package com.pattern.example.bridge;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
