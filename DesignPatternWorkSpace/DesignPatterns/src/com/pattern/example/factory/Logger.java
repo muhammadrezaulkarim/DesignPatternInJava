@@ -1,6 +1,6 @@
 package com.pattern.example.bridge;
 
-public interface Logger 
+public interface MessageLogger
 {
     public void log(String msg);
 }
