@@ -1,3 +1,5 @@
+package com.pattern.example.bridge;
+
 public class TextMessage implements Message 
 {
 
