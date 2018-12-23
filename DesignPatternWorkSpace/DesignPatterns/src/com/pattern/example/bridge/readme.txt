@@ -6,14 +6,15 @@ The related object can have more than one associated abstractions, each with a d
 For example, logger abstraction refers to the abstraction of the message logging
 functionality. ****
 
-*** A given abstraction may have one or more implementations for its methods. In terms of implementation, an abstraction can be designed as an
-interface with one or more concrete implementers ***
+*** A given abstraction may have one or more implementations for its methods. In terms of implementation, an abstraction can be designed as an interface with one or more concrete implementers ***
 
-For example, a message can be logged to different types of destinations such as a file, console and others. Depending on the destination type, a different implementation of the logger abstraction is needed. This requirement can be designed with a common Logger abstraction interface (e.g. MessageLogger Java Interface) that declares the interface (methods) of the abstraction and different implementers(e.g. FileLogger or ConsoleLogger Class) corresponding to different destination types provide implementation for the logger abstraction.  
+For example, a message can be logged to different types of destinations such as a file, console and others. Depending on the destination
+type, a different implementation of the logger abstraction is needed. This requirement can be designed with a common Logger abstraction interface (e.g. MessageLogger Java Interface) that declares the interface (methods) of the abstraction and different implementers(e.g. FileLogger or ConsoleLogger Class) corresponding to different destination types provide implementation for the logger abstraction.  
 (Please see the factory pattern example)
 
 This kind of design will allow log messages in normal text format. What will happen if we want to support logging in encrypted format? 
-To support this extended functionality, we have to modify the existing code violating object-oriented OPEN-CLOSED DESIGN principle. Both the abstraction interface and its implementation are closely tied together and hence they cannot be independently varied without affecting each other.
+To support this extended functionality, we have to modify the existing code violating object-oriented OPEN-CLOSED DESIGN principle. 
+Both the abstraction interface and its implementation are closely tied together and hence they cannot be independently varied without affecting each other.
 
 To be more specific, we have to extend subclass hierarchy of the implementer classes to support all scenarios which might lead to an exponential number of subclasses. For the logging example, we can define implement subclasses like FileLoggerTextFormat, FileLoggerEncryptedFormat and so on***
 
