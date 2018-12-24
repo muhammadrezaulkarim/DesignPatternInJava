@@ -1,3 +1,5 @@
+package com.pattern.example.command
+
 public class TextFile {
      
     private String name;
