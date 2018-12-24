@@ -1,5 +1,21 @@
 A simple example taken from: https://www.baeldung.com/java-command-pattern
 
+Context:
+..........
+In OOP, an application makes use of the services of different objects (Receiver objects for processing request). In
+terms of implementation, the application may depend on a designated Invoker object that invokes methods on these receiver objects by passing the required data as arguments.
+
+CLIENT ---> INVOKER ---> RECEIVER
+
+In this design, the application that forwards the request and the set of Receiver objects that offer the services required to 
+process the request are closely tied to each other in that they interact with each other directly. This could result in a 
+set of conditional if statements in the implementation of the invoker (one for each requested service).
+
+When a new type of feature is to be added to the application, the existing code needs to be modified (another if statement needs to be added) and it violates the basic object-oriented open-closed principle.
+ 
+Using the Command pattern, the invoker that issues a request on behalf of the client and the set of service-rendering Receiver 
+objects can be decoupled.
+
 
 Command Pattern Implementation:
 
