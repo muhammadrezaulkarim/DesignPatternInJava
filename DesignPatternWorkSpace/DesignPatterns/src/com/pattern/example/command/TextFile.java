@@ -1,4 +1,4 @@
-package com.pattern.example.command
+package com.pattern.example.command;
 
 public class TextFile {
      
