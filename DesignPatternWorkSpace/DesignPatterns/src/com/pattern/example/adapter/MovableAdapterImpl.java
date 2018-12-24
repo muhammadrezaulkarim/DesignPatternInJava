@@ -2,7 +2,7 @@ package com.pattern.example.adapter;
 
 public class MovableAdapterImpl implements MovableAdapter 
 {
-    # original incompatible interface
+    // original incompatible interface
     private Movable luxuryCar;
      
     // standard constructors
