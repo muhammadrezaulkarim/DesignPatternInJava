@@ -1,5 +1,6 @@
-package com.pattern.example.command
+package com.pattern.example.command;
 
+// invoker class
 public class TextFileOperationExecutor {
      
     private final List<TextFileOperation> textFileOperations
