@@ -1,3 +1,4 @@
+//source: https://www.baeldung.com/java-structural-design-patterns
 package com.pattern.example.proxy.virtualproxy;
 
 public class ProxyPatternTestClass 
