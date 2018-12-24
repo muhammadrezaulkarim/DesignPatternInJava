@@ -7,7 +7,7 @@ terms of implementation, the application may depend on a designated Invoker obje
 
 CLIENT ---> INVOKER ---> RECEIVER
 
-In this design, the application that forwards the request and the set of Receiver objects that offer the services required to 
+In this design, the invoker object and the set of Receiver objects that offer the services required to 
 process the request are closely tied to each other in that they interact with each other directly. This could result in a 
 set of conditional if statements in the implementation of the invoker (one for each requested service).
 
