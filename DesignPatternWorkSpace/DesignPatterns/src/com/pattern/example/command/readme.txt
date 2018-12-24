@@ -11,7 +11,7 @@ In this design, the invoker object and the set of Receiver objects that offer th
 process the request are closely tied to each other in that they interact with each other directly. This could result in a 
 set of conditional if statements in the implementation of the invoker (one for each requested service).
 
-When a new type of feature is to be added to the application, the existing code needs to be modified (another if statement needs to be added) and it violates the basic object-oriented open-closed principle.
+When a new type of feature is to be added to the application, the existing code needs to be modified (another if statement needs to be added) and it violates the basic object-oriented OPEN-CLOSED principle.
  
 Using the Command pattern, the invoker that issues a request on behalf of the client and the set of service-rendering Receiver 
 objects can be decoupled.
