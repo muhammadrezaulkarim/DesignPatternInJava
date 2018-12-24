@@ -39,7 +39,9 @@ totals.
 
 DEFINING A NEW OPERATION ON THE ORDER OBJECT COLLECTION:
 
-Defining a new operation on the order object collection requires the creation of a new visitor. The new visitor needs to 
+Defining a new operation (e.g. getMinCAOrderAmount,
+getCAOrderTotal, getMinNonCAOrderAmount, getMax-
+OverseasOrderAmount) on the order object collection requires the creation of a new visitor. The new visitor needs to 
 implement the VisitorInterface interface providing implementation for different visit(OrderType) methods
 to process different types of Order objects.
 
