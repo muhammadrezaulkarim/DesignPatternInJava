@@ -13,7 +13,7 @@ public class ThirdPartyYoutubeClass implements ThirdPartyYoutubeLib {
     private void connectToServer(String server) 
     {
         System.out.print("Connecting to " + server + "... ");
-        Thread.sleep(30) // mimic network latency
+        Thread.sleep(30000) // mimic network latency. sleep for 30000 miliseconds
         System.out.print("Connected!" + "\n");
     }
 
